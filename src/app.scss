@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  background: #282c34;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.app {
+  color: #fff;
+
+  &__header {
+    padding: .4rem 0;
+    border-bottom: .3rem solid black;
+    font-size: 3.9rem;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bolder;
+  }
+  &__article{
+    display: flex;
+    width: 100%;
+
+  }
+  &__nav{
+    font-size: 1.2rem;
+    order:1;
+    width: 10%;
+    background: black;
+  }
+  &__content{
+    order:2;
+    width: 90%;
+    background: #1f1f1f;
+  }
+}
