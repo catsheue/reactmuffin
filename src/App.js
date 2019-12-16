@@ -8,28 +8,28 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom";
-import Emoji from 'a11y-react-emoji';
+
 
 function App() {
   return (
     <Router>
       <div className="app">
         <header className="app__header">
-          <Emoji symbol="🎄" />
+          🎄
             ...React Rocks...
-          <Emoji symbol="🎅🏽" />
+          🎅🏽
         </header>
         <div className="app__article cf">
           <div className="app__nav">
             <ul>
               <li>
                 <Link to="/">
-                <Emoji symbol="🍄" />
+                🍄
                   Home
                 </Link>
               </li>
               <li>
-                <Emoji symbol="🍄" />
+                🍄
               </li>
             </ul>
           </div>
