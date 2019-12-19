@@ -1,12 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './app.scss';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 
 
@@ -15,32 +13,29 @@ function App() {
     <Router>
       <div className="app">
         <header className="app__header">
-          🎄
+          <span role="img" aria-label="christmastree">🎄</span>
             ...React Rocks...
-          🎅🏽
+          <span role="img" aria-label="santa">🎅🏽</span>
         </header>
         <div className="app__article cf">
           <div className="app__nav">
             <ul>
               <li>
                 <Link to="/">
-                🍄
+                <span role="img" aria-label="mushroom">🍄</span>
                   Home
                 </Link>
               </li>
               <li>
-                🍄
               </li>
             </ul>
           </div>
           <div className="app__content">
             <Switch>
-
-
               <Route path="/">
                 <Home />
               </Route>
-          </Switch>
+            </Switch>
           </div>
         </div>
       </div>

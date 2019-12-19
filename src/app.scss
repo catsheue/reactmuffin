@@ -44,6 +44,9 @@ body {
   background: #282c34;
 }
 
+* {
+  box-sizing: border-box;
+}
 a {
   color: #fff;
   text-decoration: none;
@@ -68,12 +71,13 @@ a {
   &__nav{
     font-size: 1.2rem;
     order:1;
-    width: 10%;
-    background: black;
+    width: 20%;
+    background: #5c5c5c;
   }
   &__content{
     order:2;
-    width: 90%;
+    width: 80%;
     background: #1f1f1f;
+    padding: 1rem 4rem;
   }
 }
