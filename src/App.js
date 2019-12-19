@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import './app.scss';
 import {
   BrowserRouter as Router,
@@ -6,6 +6,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Countdown from './components/Countdown.js';
 
 function App() {
   return (
@@ -30,11 +31,18 @@ function App() {
                   Counter
                 </Link>
               </li>
+	            <li>
+		            <Link to="/countdown">
+			            Countdown
+		            </Link>
+	            </li>
             </ul>
           </div>
           <div className="app__content">
             <Switch>
-
+	            <Route path="/countdown">
+		            <Countdown />
+	            </Route>
               <Route path="/counter">
                 <Counter />
               </Route>
