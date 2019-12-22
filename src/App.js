@@ -36,6 +36,11 @@ function App() {
 			            Countdown
 		            </Link>
 	            </li>
+              <li>
+		            <Link to="/finishloading">
+			            Detect if page has finished loading
+		            </Link>
+	            </li>
             </ul>
           </div>
           <div className="app__content">
@@ -45,6 +50,9 @@ function App() {
 	            </Route>
               <Route path="/counter">
                 <Counter />
+              </Route>
+              <Route path="/finishloading">
+                <FinishLoading />
               </Route>
               <Route path="/">
                 <Home />
@@ -57,6 +65,37 @@ function App() {
     </Router>
   );
 }
+
+class FinishLoading extends React.Component {
+
+  construcor(){
+    this.myImg = React.createRef();
+  }
+  componentDidUpdate() {
+    const node = this.myImg;
+    debugger
+
+    // const loaded = () => alert('loaded');
+    // if (node.complete) {
+    //   loaded()
+    // } else {
+    //   node.addEventListener('load', loaded)
+    //   node.addEventListener('error', function() {
+    //       alert('error')
+    //   })
+    // }
+  }
+  render() {
+    const node = this.myImg;
+    return (
+      <div>
+        <img ref={this.myImg} src="http://static.minitokyo.net/downloads/30/12/745630.jpg" alt="tomoyo" />
+      </div>
+    )
+  }
+}
+
+
 function Counter() {
   // Declare a new state variable, which we'll call "count"
   const [count, setCount] = useState(0);
