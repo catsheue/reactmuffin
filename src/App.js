@@ -7,6 +7,7 @@ import {
   Link,
 } from "react-router-dom";
 import Countdown from './components/Countdown.js';
+import HighCharts from './components/HighCharts';
 
 function App() {
   return (
@@ -41,6 +42,11 @@ function App() {
 			            Detect if page has finished loading
 		            </Link>
 	            </li>
+	            <li>
+		            <Link to="/highcharts">
+			            HighCharts
+		            </Link>
+	            </li>
             </ul>
           </div>
           <div className="app__content">
@@ -54,6 +60,9 @@ function App() {
               <Route path="/finishloading">
                 <FinishLoading />
               </Route>
+	            <Route path="/highcharts">
+		            <HighCharts />
+	            </Route>
               <Route path="/">
                 <Home />
               </Route>
