@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Countdown from './components/Countdown.js';
 import HighCharts from './components/HighCharts';
+import LogRocket from 'logrocket';
+LogRocket.init('atdidd/dream-cat');
 
 function App() {
   return (
@@ -46,7 +48,7 @@ function App() {
 		            <Link to="/highcharts">
 			            HighCharts
 		            </Link>
-	            </li>
+	            </li>              
             </ul>
           </div>
           <div className="app__content">
