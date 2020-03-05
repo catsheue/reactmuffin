@@ -7,7 +7,11 @@ import {
   Link,
 } from "react-router-dom";
 import Countdown from './components/Countdown.js';
+import Counter from './components/Counter.js';
 import HighCharts from './components/HighCharts';
+import EventObject from './components/EventObject';
+import PlayRxjs from './components/PlayRxjs';
+import TestRxjs from './components/TestRxjs';
 
 function App() {
   return (
@@ -37,14 +41,24 @@ function App() {
 			            Countdown
 		            </Link>
 	            </li>
-              <li>
-		            <Link to="/finishloading">
-			            Detect if page has finished loading
-		            </Link>
-	            </li>
 	            <li>
 		            <Link to="/highcharts">
 			            HighCharts
+		            </Link>
+	            </li>
+	            <li>
+		            <Link to="/eventobject">
+			            EventObject
+		            </Link>
+	            </li>
+	            <li>
+		            <Link to="/playrxjs">
+			            PlayRxjs
+		            </Link>
+	            </li>
+	            <li>
+		            <Link to="/testrxjs">
+			            TestRxjs
 		            </Link>
 	            </li>
             </ul>
@@ -57,16 +71,21 @@ function App() {
               <Route path="/counter">
                 <Counter />
               </Route>
-              <Route path="/finishloading">
-                <FinishLoading />
-              </Route>
 	            <Route path="/highcharts">
 		            <HighCharts />
+	            </Route>
+	            <Route path="/eventobject">
+		            <EventObject />
+	            </Route>
+	            <Route path="/playrxjs">
+		            <PlayRxjs />
+	            </Route>
+	            <Route path="/testrxjs">
+		            <TestRxjs />
 	            </Route>
               <Route path="/">
                 <Home />
               </Route>
-
           </Switch>
           </div>
         </div>
@@ -75,58 +94,12 @@ function App() {
   );
 }
 
-class FinishLoading extends React.Component {
-
-  construcor(){
-    this.myImg = React.createRef();
-  }
-  componentDidUpdate() {
-    const node = this.myImg;
-    debugger
-
-    // const loaded = () => alert('loaded');
-    // if (node.complete) {
-    //   loaded()
-    // } else {
-    //   node.addEventListener('load', loaded)
-    //   node.addEventListener('error', function() {
-    //       alert('error')
-    //   })
-    // }
-  }
-  render() {
-    const node = this.myImg;
-    return (
-      <div>
-        <img ref={this.myImg} src="http://static.minitokyo.net/downloads/30/12/745630.jpg" alt="tomoyo" />
-      </div>
-    )
-  }
-}
 
 
-function Counter() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
-  const [toggle, clickToggle] = useState(true);
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-      <p>It is {toggle.toString()} that they have no sense of shame. </p>
-      <button onClick={() => clickToggle(!toggle)}>
-        Click me
-      </button>
-    </div>
-  );
-}
 function Home() {
   return (<>
     <h2>Welcome to my React Rocks project.</h2>
-    <div>It's all about examples write in React.</div>
+    <div>It's all about examples built with React.</div>
   </>);
 
 }
