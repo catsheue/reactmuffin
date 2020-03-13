@@ -1,6 +1,11 @@
 import React, { useState }  from 'react';
+import { of } from 'rxjs';
 
+// https://www.bitovi.com/blog/rxjs-with-react-pt-1
 const source = ['Adam', 'Brian', 'Christine'];
+// create an Observable called names$, whose value is the source array:
+const names$ = of(source);
+
 
 function PlayRxjs() {
 

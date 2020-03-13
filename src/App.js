@@ -12,6 +12,8 @@ import HighCharts from './components/HighCharts';
 import EventObject from './components/EventObject';
 import PlayRxjs from './components/PlayRxjs';
 import TestRxjs from './components/TestRxjs';
+import CounterWithNameAndSideEffect from './components/CounterWithNameAndSideEffect';
+import HookApi from './components/HookApi';
 
 function App() {
   return (
@@ -61,10 +63,26 @@ function App() {
 			            TestRxjs
 		            </Link>
 	            </li>
+	            <li>
+		            <Link to="/CounterWithNameAndSideEffect">
+			            CounterWithNameAndSideEffect
+		            </Link>
+	            </li>
+	            <li>
+		            <Link to="/HookApi">
+			            HookApi
+		            </Link>
+	            </li>
             </ul>
           </div>
           <div className="app__content">
             <Switch>
+	            <Route path="/HookApi">
+		            <HookApi />
+	            </Route>
+	            <Route path="/CounterWithNameAndSideEffect">
+		            <CounterWithNameAndSideEffect />
+	            </Route>
 	            <Route path="/countdown">
 		            <Countdown />
 	            </Route>
