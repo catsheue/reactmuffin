@@ -14,6 +14,7 @@ import PlayRxjs from './components/PlayRxjs';
 import TestRxjs from './components/TestRxjs';
 import CounterWithNameAndSideEffect from './components/CounterWithNameAndSideEffect';
 import HookApi from './components/HookApi';
+import TestMomentjs from './components/TestMomentjs';
 
 function App() {
   return (
@@ -64,6 +65,11 @@ function App() {
 		            </Link>
 	            </li>
 	            <li>
+		            <Link to="/testmomentjs">
+			            TestMomentJs
+		            </Link>
+	            </li>
+	            <li>
 		            <Link to="/CounterWithNameAndSideEffect">
 			            CounterWithNameAndSideEffect
 		            </Link>
@@ -77,6 +83,9 @@ function App() {
           </div>
           <div className="app__content">
             <Switch>
+	            <Route path="/testmomentjs">
+		            <TestMomentjs />
+	            </Route>
 	            <Route path="/HookApi">
 		            <HookApi />
 	            </Route>
